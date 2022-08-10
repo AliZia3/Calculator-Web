@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background: linear-gradient(to right, purple, rgb(63, 63, 222));
+    height: 100vh;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 8px 8px 8px black;
+}
+
+.display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 140px;
+    padding: 5px;
+    margin-bottom: 15px;
+    text-align: end;
+}
+
+.input {
+    margin-top: 5px;
+    font-size: 26px;
+}
+
+.output {
+    font-size: 18px;
+}
+
+.theme-toggler {
+    background: linear-gradient(to right, rgb(37, 36, 36), white);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.theme-toggler:hover {
+    transform: scale(1.2);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+}
+
+button {
+    font-size: 24px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+.grid button:hover {
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+@keyframes small {
+    0% {
+        font-size: 26px;
+    }
+
+    100% {
+        font-size: 18px;
+    }
+}
+
+@keyframes big {
+    0% {
+        font-size: 18px;
+    }
+
+    100% {
+        font-size: 28px;
+    }
+}
+
+
+/* Dark Theme */
+
+.calculator {
+    transition: 0.3s ease-in-out;
+    background: rgb(8, 4, 30);
+}
+
+.calculator .display {
+    color: white;
+}
+
+.calculator button {
+    background-color: rgb(63, 63, 121);
+    color: white;
+}
+
+.calculator button.erase {
+    background-color: rgb(87, 10, 10);
+    color: rgb(199, 30, 30);
+}
+
+.calculator button.operation {
+    background-color: rgb(62, 8, 62);
+    color: rgb(154, 23, 154);
+}
+
+.calculator button.equal {
+    background-color: rgb(16, 67, 16);
+    color: white;
+}
+
+/* Light Theme */
+
+.calculator.light {
+    background: rgb(222, 210, 210);
+}
+
+.calculator.light .display {
+    color: black;
+}
+
+.calculator.light button {
+    background-color: #c3eaff;
+    color: #000000;
+}
+
+.calculator.light button.erase {
+    background-color: rgb(193, 21, 21);
+    color: rgb(91, 23, 23);
+}
+
+.calculator.light button.operation {
+    background-color: rgb(193, 22, 193);
+    color: rgb(94, 14, 94);
+}
+
+.calculator.light button.equal {
+    background-color: rgb(28, 183, 28);
+    color: white;
+}
